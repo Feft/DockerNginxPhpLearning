@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  nginx:
+    build:
+      context: ./docker/nginx
+    image: feft-nginx
+    container_name: feft-web-container
+    ports:
+      - 80:80
+    volumes:
+      - ./src:/var/www/html
+      - ./logs/nginx/:/var/log/nginx
+
+  php:
+    build:
+      context: ./docker/php
+    image: feft-php
+    container_name: feft-php-container
+    volumes:
+      - ./src:/var/www/html
