@@ -1,2 +1,3 @@
-# DockerNgnixPhpLearning
-Docker for php developers training
+# DockerNginxPhpLearning
+Docker for php developers training.
+Work in progress.
