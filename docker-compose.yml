@@ -9,7 +9,7 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./src:/app
+      - ./app:/app
       - ./logs/nginx/:/var/log/nginx
 
   php:
@@ -18,4 +18,4 @@ services:
     image: feft-php
     container_name: feft-php-container
     volumes:
-      - ./src:/app
+      - ./app:/app
